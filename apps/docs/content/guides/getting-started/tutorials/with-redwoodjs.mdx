@@ -33,7 +33,7 @@ Pages may contain a "Layout" component to wrap content. They also contain "Cells
 Cells allow you to declaratively manage the lifecycle of a component that fetches and displays data.
 
 For the sake of consistency with the other framework tutorials, we'll build this app a little differently than normal.
-We **_won't use_** Prisma to connect to the Supabase Postgres database or [Prisma migrations](https://redwoodjs.com/docs/cli-commands#prisma-migrate) as one typically might in a Redwood app.
+We **_won't use_** Prisma to connect to the Supabase Postgres database or [Prisma migrations](https://docs.redwoodjs.com/docs/cli-commands#prisma-migrate) as one typically might in a Redwood app.
 Instead, we'll rely on the Supabase client to do some of the work on the **`web`** side and use the client again on the **`api`** side to do data fetching as well.
 
 That means you will want to refrain from running any `yarn rw prisma migrate` commands and also double check your build commands on deployment to ensure Prisma won't reset your database. Prisma currently doesn't support cross-schema foreign keys, so introspecting the schema fails due
@@ -55,7 +55,7 @@ Make sure you have installed yarn since RedwoodJS relies on it to [manage its pa
 
 ### Initialize a RedwoodJS app
 
-We can use [Create Redwood App](https://redwoodjs.com/docs/quick-start) command to initialize
+We can use [Create Redwood App](https://docs.redwoodjs.com/docs/quick-start) command to initialize
 an app called `supabase-redwoodjs`:
 
 ```bash
